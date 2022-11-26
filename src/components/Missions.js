@@ -6,18 +6,21 @@ import missions from '../data/missions';
 class Missions extends React.Component {
   render() {
     const missoes = missions.map((missao) => {
-      const { name, year, country, destination } = missao;
+      const n = missao.name;
+      const y = missao.year;
+      const c = missao.country;
+      const d = missao.destination;
       return (
-        <li key={ name }>
-          <MissionCard name={ name } year={ year } country={ country } destination={ destination } />      
-        </li>  
-      );    
+        <li key={ n }>
+          <MissionCard name={ n } year={ y } country={ c } destination={ d } /> 
+        </li>
+      );
     });
     return (
       <div data-testid="missions">
         <Title headline="Missões" />
         <ul>
-          { missoes }    
+          { missoes }
         </ul>
       </div>
     );

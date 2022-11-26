@@ -12,7 +12,7 @@ class Missions extends React.Component {
       const d = missao.destination;
       return (
         <li key={ n }>
-          <MissionCard name={ n } year={ y } country={ c } destination={ d } /> 
+          <MissionCard name={ n } year={ y } country={ c } destination={ d } />
         </li>
       );
     });
